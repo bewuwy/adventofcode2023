@@ -93,46 +93,6 @@ for map_i in range(1, len(input_list)):
         print("seed", seed_i, best_start)
         seeds_ranges[seed_i][0] = best_start
         
-    # quit()
-        
-        # seed_range = seeds_ranges[seed_i]
-        # seed_length = seed_range[1] - seed_range[0]
-        
-        # out_ignore = None
-        # can_ignore = False
-        
-        # for (m_i, m_line) in enumerate(map_lines):
-        #     (dest_start, source_start, length) = [int(i) for i in m_line.split(" ")]
-            
-        #     diff_min = seed_range[0] - source_start
-        #     diff_max = seed_range[1] - source_start
-        #     if diff_min > length or diff_max < 0:
-        #         continue
-            
-        #     if diff_min < 0:
-        #         can_ignore = True
-        #         out_ignore = min(out_ignore if out_ignore else 9999999999999, seed_range[0])
-        #         # print("out_ignore", out_ignore)
-            
-        #     print(f"seed {seed_i}, map {m_i}")
-        #     print("diff", diff_min, diff_max)
-            
-        #     # find smallest possible next seed start range
-        #     seeds_ranges[seed_i][0] = max(seeds_ranges[seed_i][0], source_start)
-            
-        #     diff = seeds_ranges[seed_i][0] - source_start
-            
-        #     seeds_ranges[seed_i][0] = min(seeds_ranges[seed_i][0], dest_start + diff)
-        #     seeds_ranges[seed_i][1] = min(seeds_ranges[seed_i][1], seeds_ranges[seed_i][0] + seed_length)
-        #     break
-        # else:
-        #     can_ignore = True
-        
-        # if can_ignore:
-        #     seeds_ranges[seed_i][0] = min(seeds_ranges[seed_i][0], out_ignore if out_ignore else 9999999999999)
-        
-    # print(seeds_ranges)
-        
 seeds_starts = [i[0] for i in seeds_ranges]
 
 lowest = min(seeds_starts)
